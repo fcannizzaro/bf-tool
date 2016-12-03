@@ -1,0 +1,54 @@
+{
+	"name": "bf-tool",
+	"version": "1.5.0",
+	"description": "Simple Bison, Flex and GCC Utility",
+	"main": "bin/bf.js",
+	"bin": {
+		"bf-tool": "bin/bf.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"flex",
+		"bison",
+		"gcc"
+	],
+	"dependencies": {
+		"chokidar": "^1.6.1",
+		"minimist": "^1.2.0"
+	},
+	"author": "Francesco Cannizzaro (fcannizzaro)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fcannizzaro/bf-tool.git"
+	},
+	"bugs": {
+		"url": "https://github.com/fcannizzaro/bf-tool/issues"
+	},
+	"homepage": "https://github.com/fcannizzaro/bf-tool#readme",
+	"nexe": {
+		"input": "./bin/bf",
+		"output": "bf-tool^$",
+		"temp": "src",
+		"browserify": {
+			"requires": [],
+			"excludes": [
+				"fsevents"
+			],
+			"paths": []
+		},
+		"runtime": {
+			"framework": "node",
+			"version": "7.1.0",
+			"flags": true,
+			"nodeVCBuildArgs": [
+				"nosign",
+				"x64"
+			],
+			"js-flags": "--use_strict",
+			"ignoreFlags": true
+		}
+	}
+}
